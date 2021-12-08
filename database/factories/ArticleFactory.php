@@ -16,7 +16,7 @@ class ArticleFactory extends Factory
      */
     public function definition()
     {
-        $title = $this->faker->word();
+        $title = $this->faker->realText(100);
         $slug = Str::slug($title);
         $description = $this->faker->realText();
         $excerpt = Str::words($description,50,"....");
